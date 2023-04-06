@@ -1,0 +1,78 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+}
+
+android {
+    compileSdk AppConfig.compileSdk
+    defaultConfig {
+        applicationId "com.nearby.task"
+        minSdk AppConfig.minSdk
+        targetSdk AppConfig.targetSdk
+        versionCode AppConfig.versionCode
+        versionName AppConfig.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+configurations {
+    all*.exclude group: 'com.google.guava', module: 'listenablefuture'
+}
+
+
+
+
+dependencies {
+
+//  lifecycleLibrary
+    implementation AppDependencies.lifecycleLibrary
+
+//  navigationLibrary
+    implementation AppDependencies.navigationLibrary
+
+//  glide
+    implementation AppDependencies.glide
+    annotationProcessor AppDependencies.glideAnnotation
+
+//  hilt
+    implementation AppDependencies.hiltAndroid
+    kapt AppDependencies.hiltAndroidCompiler
+
+//  appLibraries
+    implementation(AppDependencies.appLibraries)
+
+//  mapLibraries
+    implementation(AppDependencies.mapLibraries)
+
+//  retrofitLibraries
+    implementation(AppDependencies.retrofitLibraries)
+
+//  coroutinesLibraries
+    implementation(AppDependencies.coroutinesLibraries)
+
+//  androidRoom
+    implementation AppDependencies.androidRoom
+    kapt AppDependencies.roomCompiler
+
+    //test libs
+    testImplementation(AppDependencies.testLibraries)
+    androidTestImplementation(AppDependencies.androidTestLibraries)
+}
+

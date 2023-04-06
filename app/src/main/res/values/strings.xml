@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Nearby Restaurants</string>
+    <string name="google_map_api_key">AIzaSyB1tU_7k6M6_ppWcg8A3Jj4Cp9w2xqSHoE</string>
+    <string name="no_connection_available">Please check internet</string>
+    <string name="text_dashboard_nav_home">Near By</string>
+    <string name="text_dashboard_nav_news">WishList</string>
+    <string name="near_by_restaurant">NearBy Restaurants</string>
+    <string name="wish_list">Wishlist</string>
+    <string name="no_data_found">No data found</string>
+    <string name="rating">rating</string>
+    <string name="open_now">Open now</string>
+
+</resources>

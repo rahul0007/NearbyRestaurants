@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboard_nav"
+    app:startDestination="@+id/navigation_near_by">
+
+    <fragment
+        android:id="@+id/navigation_near_by"
+        android:name="com.nearby.task.ui.fragments.NearByFragment"
+        android:label="@string/text_dashboard_nav_home"
+        tools:layout="@layout/fragment_near_by">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_wishlist"
+        android:name="com.nearby.task.ui.fragments.WishListFragment"
+        android:label="@string/text_dashboard_nav_news"
+        tools:layout="@layout/fragment_wishlist">
+    </fragment>
+</navigation>

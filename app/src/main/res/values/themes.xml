@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.HiltExampleAndroid" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorSecondary">@color/lightGrey</item>
+        <item name="colorSecondaryVariant">@color/darkGrey</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="OLBLoadingDialogTheme" parent="android:Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">@color/loading_dialog_background_color</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+        <style name="foodRatingBar" parent="@android:style/Widget.RatingBar">
+            <item name="android:minHeight">22dip</item>
+            <item name="android:maxHeight">22dip</item>
+        </style>
+</resources>

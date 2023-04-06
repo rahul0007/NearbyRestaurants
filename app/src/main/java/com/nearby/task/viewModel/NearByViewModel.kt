@@ -3,6 +3,7 @@ package com.nearby.task.viewModel
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.nearby.task.R
 import com.nearby.task.database.RoomRepository
 import com.nearby.task.extentions.manageNetwork
 import com.nearby.task.lifecycle.ErrorModelView
@@ -51,7 +52,7 @@ class NearByViewModel @Inject constructor(
                         latLong,
                         "restaurants",
                         "distance",
-                        "AIzaSyB1tU_7k6M6_ppWcg8A3Jj4Cp9w2xqSHoE"
+                        context.getString(R.string.google_map_api_key)
                     ).apply {
 
                         if (this.awaitResponse().body()?.status.equals("REQUEST_DENIED")) {
